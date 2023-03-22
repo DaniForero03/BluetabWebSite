@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+        @apply accent-primary-500;
+    }
+
+    * {
+        @apply transition-colors duration-500 ease-in-out;
+    }
+
+    div[data-name="mi-div"] {
+        transition-duration: 0s;
+        width: 300px;
+        height: 300px;
+    }
+
+    div[data-name="mi-div"]:empty {
+        background-color: green;
+    }
+}
+
+@layer components {
+    .btn {
+        @apply rounded py-1 px-4 border border-transparent;
+        @apply focus:outline-none focus:ring-2;
+    }
+}
